@@ -8,7 +8,7 @@
 
 <div class="content-overlay content">
     <h1 class="h1 heading-overlay">
-        <p><?php the_field('test'); ?></p>
+        <p>Conecta mejor con tu audiencia<br>utilizando audiovisuales</p>
     </h1>
     <div class="align-center play-button">
         <a href="https://www.youtube.com/watch?v=mJ9a3yaeIZ8&t=1s" target="_blank" class="icon-button accent prominent">

@@ -20,10 +20,10 @@
     </div>
     <div class="footer-chat-bubble">
         <p class="prominent">
-            <?php echo get_option('right_prominent_text') ?>
+            <?php echo get_option('right_prominent_text', DEFAULTS['right_prominent_text']) ?>
         </p>
         <p>
-            <?php echo get_option('right_normal_text') ?>
+            <?php echo get_option('right_normal_text', DEFAULTS['right_normal_text  ']) ?>
         <p>
     </div>
 </footer>
