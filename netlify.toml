@@ -1,0 +1,4 @@
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "https://ateneabc-2.000webhostapp.com"
