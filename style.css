@@ -1,0 +1,532 @@
+/*
+Theme Name: atenea bc
+Author: Samuel Mitas
+Version: 1.0.0
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background: #33ab97;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #33ab97;
+    color: #fff;
+}
+
+@font-face {
+    font-family: Bw modelica;
+    font-weight: 900;
+    src: url('https://gallant-perlman-80499b.netlify.app/BwModelica-ExtraBold.woff');
+}
+
+@font-face {
+    font-family: Bw modelica;
+    font-weight: 500;
+    src: url('https://gallant-perlman-80499b.netlify.app/BwModelica-Black.woff');
+}
+
+@font-face {
+    font-family: Bw modelica;
+    font-weight: 300;
+    src: url('https://gallant-perlman-80499b.netlify.app/BwModelica-Light.woff');
+}
+
+/* common */
+
+body {
+    background-color: #fefefe;
+    width: 100%;
+}
+
+.h1 {
+    font-size: 41px;
+}
+
+.content {
+    margin: 0 auto;
+    width: 1300px;
+}
+
+@media only screen and (max-width: 780px) {
+    .content {
+        width: 100%;
+    }
+}
+
+.align-center {
+    align-self: center;
+}
+
+.icon-button {
+    align-items: center;
+    background-color: #29193e;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    text-decoration: none;
+    width: 48px;
+}
+
+.icon-button.prominent {
+    height: 60px;
+    width: 60px;
+}
+
+.icon-button.accent {
+    background-color: red;
+}
+
+.icon-button.prominent .material-icons {
+    font-size: 40px;
+}
+
+/* hacemos conexiones */
+
+.section-with-image-background {
+    display: flex;
+    background-image: url('https://gallant-perlman-80499b.netlify.app/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #785b88;
+}
+
+.section-with-image-background .bubble-box {
+    background-color: #351944;
+    color: #00adaa;
+    padding: 16px;
+    margin: 24px;
+    float: left;
+    text-transform: uppercase;
+    font-family: Bw modelica;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 38px;
+}
+
+.section-with-image-background .bubble-box .prominent {
+    padding: 0 0 0 34px;
+    color: #fff;
+}
+
+@media only screen and (max-width: 780px) {
+    .section-with-image-background .bubble-box {
+        font-size: 30px;
+    }
+}
+
+/* index */
+
+.heading-overlay .prominent {
+    font-size: 54px;
+}
+
+.video-background {
+    top: 0;
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
+.video-background video {
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 780px) {
+    .video-background {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .video-background video {
+        height: 400px;
+        width: auto;
+    }
+}
+
+.content-overlay {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 120px;
+}
+
+.play-button {
+    margin: 0 0 48px;
+}
+
+.three-column {
+    padding: 24px 16px;
+    background-color: #fff;
+}
+
+.three-column .hashtag {
+    float: left;
+    color: #ed4357;
+}
+
+.three-column .text {
+    width: 230px;
+    float: left;
+}
+
+.three-column .icon {
+    height: 100px;
+    padding: 0 8px 0;
+}
+
+.three-column-item {
+    display: flex;
+}
+
+.three-column-content {
+    flex: 1;
+    color: #00b1f7;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Bw modelica;
+}
+
+@media only screen and (max-width: 780px) {
+    .three-column-content {
+        font-size: 18px;
+    }
+
+    .three-column .icon {
+        max-width: 100%;
+    }
+
+    .three-column .text {
+        width: auto;
+    }
+}
+
+/* page */
+.content-page {
+    margin: 120px auto;
+}
+
+.post-wrapper {
+    width: 667px;
+}
+
+.post-wrapper p {
+    padding: 0 0 1em 0;
+    color: #004c84;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    color: #00adaa;
+    padding: 0.5em 0;
+}
+
+@media only screen and (max-width: 780px) {
+    .content-page {
+        margin: 48px 0;
+    }
+
+    .post-wrapper {
+        width: 100%;
+        padding: 24px;
+        box-sizing: border-box;
+    }
+}
+
+/* header */
+
+.header-wrapper {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.header-content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1250px;
+}
+
+.header-content .social {
+    list-style: none;
+    flex: 1;
+}
+
+.header-content .menu-link {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.header-wrapper.transparent {
+    background-color: transparent;
+    transition: background-color .2s ease-in;
+}
+
+.header-wrapper.transparent.sticky {
+    background-color: #fff;
+}
+
+.header-wrapper.transparent .logo {
+    background-color: #29193e;
+}
+
+
+.header-content .logo img {
+    height: 120px;
+    width: 120px;
+}
+
+@media only screen and (max-width: 780px) {
+    .header-content {
+        width: 100%;
+        box-sizing: border-box;
+        height: 80px;
+        padding: 0 24px;
+    }
+
+    .header-content .logo {
+        order: 1;
+    }
+
+    .header-content .social {
+        order: 2;
+        justify-content: flex-end;
+        display: flex;
+    }
+
+    .header-content .menu-link {
+        order: 3;
+        flex: 0;
+        padding: 0 0 0 16px;
+    }
+
+    .header-content .logo img {
+        width: 80px;
+        height: auto;
+    }
+
+    .content-overlay {
+        top: 80px;
+    }
+
+    .heading-overlay {
+        padding: 48px 24px 24px 24px;
+        margin: 0;
+        font-size: 30px;
+    }
+}
+
+/* menu */
+
+.menu-wrapper {
+    background-color: #00adaa;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform .4s ease-out;
+    width: 100%;
+    z-index: 2;
+}
+
+.menu-wrapper::before {
+    background-image: url('https://gallant-perlman-80499b.netlify.app/bg.png');
+    background-position: left top;
+    background-size: cover;
+    content: '';
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    width: 50%;
+}
+
+.menu-wrapper.open {
+    transform: translateX(0);
+}
+
+.menu-wrapper .menu {
+    margin: 160px 0;
+}
+
+.menu-wrapper .menu .menu-item {
+    font-family: Bw modelica;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 60px;
+    list-style: none;
+}
+
+.menu-wrapper .menu .menu-item a {
+    border-bottom: none;
+    color: #ffcc03;
+    text-decoration: none;
+    transition: border-bottom .2s ease-in-out;
+}
+
+.menu-wrapper .menu .menu-item a:hover {
+    border-bottom: 8px solid #ffcc03;
+}
+
+@media only screen and (max-width: 780px) {
+    .menu-wrapper::before {
+        display: none;
+    }
+
+    .menu-wrapper .column {
+        flex: 0;
+    }
+
+    .menu-wrapper .column:first-child {
+        flex: 1;
+    }
+
+    .menu-wrapper .menu {
+        margin: 80px 0 0 0;
+        padding: 0 24px;
+    }
+
+    .menu-wrapper .menu .menu-item {
+        font-size: 30px;
+        line-height: 48px;
+    }
+}
+
+.heading-overlay {
+    color: #fff;
+    font-family: Bw modelica;
+    font-weight: 900;
+    margin: 60px 0 24px 0;
+    text-align: center;
+    text-shadow: 0 1px #777;
+}
+
+/* footer */
+
+.footer {
+    align-items: center;
+    background-color: #351944;
+    color: #857294;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-menu {
+    line-height: 24px;
+    padding: 0 60px 8px 60px;
+}
+
+.footer-menu .menu-item {
+    display: inline;
+}
+
+.footer-menu .menu-item a {
+    color: #857294;
+    text-decoration: none;
+}
+
+.footer-menu .menu-item:after {
+    color: #857294;
+    content: '-';
+    margin: 0 0 0 8px;
+}
+
+.footer-menu .menu-item:last-child:after {
+    content: '';
+}
+
+.footer-chat-bubble {
+    background-color: #ffab03;
+    color: #3a5d56;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 24px;
+    text-align: left;
+    margin: 0 0 24px 24px;
+}
+
+.footer-chat-bubble .prominent {
+    color: #fff;
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 780px) {
+    .footer-menu {
+        margin: 24px 24px 4px 24px;
+        padding: 0;
+    }
+
+    .footer-chat-bubble {
+        margin: 24px 0 0 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* grid */
+
+.grid {
+    display: flex;
+    flex-direction: row;
+}
+
+.grid .column {
+    flex: 1;
+}
+
+.grid-layout-2,
+.grid-layout-3 {
+    display: grid;
+    grid-gap: 16px;
+}
+
+.grid-layout-2 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-layout-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-span-2 {
+    grid-column: span 2;
+}
+
+@media only screen and (max-width: 780px) {
+    .grid-layout-1--sm {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-layout-2,
+    .grid-layout-3 {
+        grid-gap: 0;
+    }
+}
