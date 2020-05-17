@@ -1,4 +1,4 @@
-# Antenea wordpress theme
+# Atenea bc wordpress theme
 
 This repo contains the source files of the ancient wordpress theme.
 
