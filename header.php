@@ -25,9 +25,9 @@
             } ?>
         </div>
         <div class="menu-link">
-            <div class="menu-open-button icon-button">
+            <a href="#" class="menu-open-button icon-button">
                 <span class="material-icons">menu</span>
-            </div>
+            </a>
         </div>
     </div>
 </header>
@@ -37,9 +37,9 @@
         <div class="column">
             <header class="header-wrapper transparent">
                 <div class="header-content">
-                    <div class="menu-close-button icon-button">
+                    <a href="#" class="menu-close-button icon-button">
                         <span class="material-icons">close</span>
-                    </div>
+                    </a>
                 </div>
             </header>
             <nav class="menu">
@@ -57,8 +57,16 @@
                     }?>
             </nav>
         </div>
-        <div class="column">
-
+        <div class="column menu-right-side">
+            <div class="bubble-box primary">
+                <span>#hace</span>
+                <br>
+                <span class="obscure">mos</span>
+                <br>
+                <span class="prominent">cone</span>
+                <br>
+                <span class="prominent">xiones</span>
+            </div>
         </div>
     </div>
 </div>
