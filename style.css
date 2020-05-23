@@ -1,7 +1,9 @@
 /*
 Theme Name: atenea bc
 Author: Samuel Mitas
-Version: 1.0.0
+Version: 1.0.1
+GitHub Theme URI: https://github.com/mitas1/atenea-wordpress
+GitHub Branch:    master
 */
 
 * {
@@ -41,7 +43,12 @@ Version: 1.0.0
 
 body {
     background-color: #fefefe;
+    font-family: Bw modelica, sans-serif;
     width: 100%;
+}
+
+html * {
+    font-family: sans-serif;
 }
 
 .h1 {
@@ -98,7 +105,7 @@ body {
     background-color: #785b88;
 }
 
-.section-with-image-background .bubble-box {
+.bubble-box {
     background-color: #351944;
     color: #00adaa;
     padding: 16px;
@@ -109,16 +116,44 @@ body {
     font-weight: 900;
     font-size: 40px;
     line-height: 38px;
+
 }
 
-.section-with-image-background .bubble-box .prominent {
+.bubble-box .prominent,
+.bubble-box .obscure {
     padding: 0 0 0 34px;
+}
+
+.bubble-box .obscure {
+    font-size: 36px;
+}
+
+.bubble-box .prominent {
     color: #fff;
 }
 
+.bubble-box.primary {
+    font-size: 80px;
+    line-height: 64px;
+    z-index: 1;
+}
+
+.bubble-box.primary .obscure {
+    font-size: 60px;
+    line-height: 40px;
+}
+
+.bubble-box.primary .prominent,
+.bubble-box.primary .obscure {
+    padding: 0 0 0 65px;
+}
+
 @media only screen and (max-width: 780px) {
-    .section-with-image-background .bubble-box {
+    .bubble-box {
         font-size: 30px;
+    }
+    .bubble-box.primary {
+        display: none;
     }
 }
 
@@ -168,7 +203,6 @@ body {
 }
 
 .three-column {
-    padding: 24px 16px;
     background-color: #fff;
 }
 
@@ -178,7 +212,7 @@ body {
 }
 
 .three-column .text {
-    width: 230px;
+    width: 200px;
     float: left;
 }
 
@@ -188,15 +222,29 @@ body {
 }
 
 .three-column-item {
+    padding: 16px 24px;
     display: flex;
+    border-right: 1px solid #777;
+}
+
+.three-column-item:last-child {
+    border: none;
 }
 
 .three-column-content {
     flex: 1;
     color: #00b1f7;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     font-family: Bw modelica;
+}
+
+.three-column-item:hover {
+    background-color: #c4d93e;
+}
+
+.three-column-item:hover .three-column-content {
+    color: #fff;
 }
 
 @media only screen and (max-width: 780px) {
@@ -211,15 +259,24 @@ body {
     .three-column .text {
         width: auto;
     }
+
+    .three-column-item {
+        border-bottom: 1px solid #777;
+    }
 }
 
 /* page */
+.bubble-box-content-page {
+    margin: 140px auto 20px auto;
+}
+
 .content-page {
-    margin: 120px auto;
+    margin: 50px auto 120px auto;
 }
 
 .post-wrapper {
     width: 667px;
+    padding: 0 24px;
 }
 
 .post-wrapper p {
@@ -240,13 +297,16 @@ h6 {
 
 @media only screen and (max-width: 780px) {
     .content-page {
-        margin: 48px 0;
+        margin: 24px 0 48px 0;
     }
 
     .post-wrapper {
         width: 100%;
-        padding: 24px;
         box-sizing: border-box;
+    }
+
+    .bubble-box-content-page {
+        margin: 100px auto 20px auto;
     }
 }
 
@@ -257,7 +317,7 @@ h6 {
     position: fixed;
     right: 0;
     top: 0;
-    background-color: #fff;
+    background-color: #0ab4ac;
     z-index: 1;
 }
 
@@ -373,7 +433,7 @@ h6 {
 }
 
 .menu-wrapper .menu {
-    margin: 160px 0;
+    margin: 160px 30px;
 }
 
 .menu-wrapper .menu .menu-item {
@@ -393,6 +453,16 @@ h6 {
 
 .menu-wrapper .menu .menu-item a:hover {
     border-bottom: 8px solid #ffcc03;
+}
+
+.menu-right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.menu-right-side .bubble-box {
+    padding: 60px 36px;
 }
 
 @media only screen and (max-width: 780px) {
@@ -479,6 +549,20 @@ h6 {
     font-size: 24px;
 }
 
+.chat-with-us-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.chat-with-us-wrapper .chat-with-us {
+    padding: 8px 24px;
+    font-size: 24px;
+    background-color: #09b5ac;
+    color: #fff;
+    font-weight: 900;
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 780px) {
     .footer-menu {
         margin: 24px 24px 4px 24px;
@@ -489,6 +573,12 @@ h6 {
         margin: 24px 0 0 0;
         width: 100%;
         box-sizing: border-box;
+        text-align: center;
+    }
+
+    .chat-with-us-wrapper {
+        justify-content: center;
+        margin: 8px 0 0 0;
     }
 }
 
@@ -506,11 +596,10 @@ h6 {
 .grid-layout-2,
 .grid-layout-3 {
     display: grid;
-    grid-gap: 16px;
 }
 
 .grid-layout-2 {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-layout-3 {

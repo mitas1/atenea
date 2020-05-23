@@ -1,5 +1,5 @@
 <div class="video-background">
-    <video preload="none" autoplay loop muted>
+    <video preload="none" autoplay playsinline loop muted>
         <source type="video/mp4"
             src="https://gallant-perlman-80499b.netlify.app/video.mp4" />
             Your browser does not support the video tag.
@@ -17,27 +17,36 @@
     </div>
     <?php get_template_part( 'templates/content', 'connexiones' ); ?>
     <section class="grid-layout-3 grid-layout-1--sm three-column">
-        <div class="grid-item three-column-item">
+        <a href="<?php echo get_option('column1_link') ?>"
+            class="grid-item three-column-item">
             <div class="three-column-content">
                 <div class="hashtag">#</div>
-                <div class="text">comunicación<br>digital</div>
+                <div class="text">
+                    <?php echo get_option('column1_label', DEFAULTS['column1_label']) ?>
+                </div>
             </div>
             <img class="icon" src="https://gallant-perlman-80499b.netlify.app/1.svg">
-        </div>
-        <div class="grid-item three-column-item">
+        </a>
+        <a href="<?php echo get_option('column2_link') ?>"
+            class="grid-item three-column-item">
             <div class="three-column-content">
                 <div class="hashtag">#</div>
-                <div class="text">inboundmarketing<br>politico</div>
+                <div class="text">
+                    <?php echo get_option('column2_label', DEFAULTS['column2_label']) ?>
+                </div>
             </div>
             <img class="icon" src="https://gallant-perlman-80499b.netlify.app/2.svg">
-        </div>
-        <div class="grid-item three-column-item">
+        </a>
+        <a href="<?php echo get_option('column3_link') ?>"
+            class="grid-item three-column-item">
             <div class="three-column-content">
                 <div class="hashtag">#</div>
-                <div class="text">data<br>analytics</div>
+                <div class="text">
+                    <?php echo get_option('column3_label', DEFAULTS['column3_label']) ?>
+                </div>
             </div>
             <img class="icon" src="https://gallant-perlman-80499b.netlify.app/3.svg">
-        </div>
+        </a>
     </section>
     <?php  include get_template_directory() . '/templates/footer.php'; ?>
 </div>
